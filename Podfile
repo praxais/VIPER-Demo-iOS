@@ -10,5 +10,6 @@ target 'Viper-Demo' do
     pod 'RxCocoa',    '~> 4.0'
     pod 'Alamofire', '~> 4.5'
     pod 'AlamofireObjectMapper', '~> 5.0'
+    pod 'AlamofireImage', '~> 3.3'
     pod 'PKHUD', '~> 5.0'
 end

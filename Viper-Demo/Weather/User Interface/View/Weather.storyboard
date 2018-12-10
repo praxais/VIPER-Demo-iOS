@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HSb-ou-7T5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather-->
+        <scene sceneID="R60-Pu-Hpy">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" title="Weather" id="HSb-ou-7T5" customClass="WeatherViewController" customModule="Viper_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y1H-iV-BwG"/>
+                        <viewControllerLayoutGuide type="bottom" id="PYB-Kq-ghm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Uc-9s-KgO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q2H-9k-0f1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherCell" id="Ctx-5y-TQ8" customClass="WeatherTableViewCell" customModule="Viper_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ctx-5y-TQ8" id="Xnr-NP-Fp8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6w-ha-JGl">
+                                                    <rect key="frame" x="0.0" y="-3.5" width="50" height="50.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="ki1-rx-gbr"/>
+                                                        <constraint firstAttribute="height" constant="50" id="rlj-mr-fg6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODT-5Z-RbU">
+                                                    <rect key="frame" x="66" y="22" width="294" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ODT-5Z-RbU" firstAttribute="centerY" secondItem="Xnr-NP-Fp8" secondAttribute="centerY" id="0di-ha-s3r"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ODT-5Z-RbU" secondAttribute="trailing" id="Ewp-33-eMd"/>
+                                                <constraint firstItem="m6w-ha-JGl" firstAttribute="leading" secondItem="Xnr-NP-Fp8" secondAttribute="leading" id="Qfm-ZX-42o"/>
+                                                <constraint firstItem="m6w-ha-JGl" firstAttribute="centerY" secondItem="Xnr-NP-Fp8" secondAttribute="centerY" id="sl1-3T-w1W"/>
+                                                <constraint firstItem="ODT-5Z-RbU" firstAttribute="leading" secondItem="m6w-ha-JGl" secondAttribute="trailing" constant="16" id="vWl-jI-YsA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="ODT-5Z-RbU" id="e9r-Z8-9Ph"/>
+                                            <outlet property="weatherImage" destination="m6w-ha-JGl" id="2Os-O3-MaE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q2H-9k-0f1" firstAttribute="leading" secondItem="9Uc-9s-KgO" secondAttribute="leading" id="4T9-g6-A63"/>
+                            <constraint firstItem="PYB-Kq-ghm" firstAttribute="top" secondItem="q2H-9k-0f1" secondAttribute="bottom" id="FB5-F4-0bK"/>
+                            <constraint firstAttribute="trailing" secondItem="q2H-9k-0f1" secondAttribute="trailing" id="USP-Qt-vXb"/>
+                            <constraint firstItem="q2H-9k-0f1" firstAttribute="top" secondItem="y1H-iV-BwG" secondAttribute="bottom" id="e6v-I8-bF5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="q2H-9k-0f1" id="vhM-0N-7KP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8je-5K-XuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="233"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.78177064659999995" green="0.55228364470000002" blue="0.018981300289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
